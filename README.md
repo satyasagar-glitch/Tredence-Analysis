@@ -19,19 +19,6 @@ A custom linear layer that associates each weight with a learnable **gate score*
 
 If a gate's value approaches 0, the corresponding weight is effectively **pruned** from the network. Crucially, gradients flow through both `weight` and `gate_scores`, so both are updated by the optimizer.
 
-```python
-class PrunableLinear(nn.Module):
-    def __init__(self, in_features, out_features):
-        super().__init__()
-        self.weight      = nn.Parameter(torch.empty(out_features, in_features))
-        self.bias        = nn.Parameter(torch.zeros(out_features))
-        self.gate_scores = nn.Parameter(torch.full((out_features, in_features), -1.0))
-
-    def forward(self, x):
-        gates          = torch.sigmoid(self.gate_scores)
-        pruned_weights = self.weight * gates
-        return F.linear(x, pruned_weights, self.bias)
-```
 
 > **Key design choice:** Gate scores are initialized to `-1.0`, so `sigmoid(-1) ≈ 0.27`. This means gates start **mostly closed** and only open if the optimizer finds the connection useful.
 
