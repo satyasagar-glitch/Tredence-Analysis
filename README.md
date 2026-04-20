@@ -80,18 +80,18 @@ Softmax → Class Prediction
 ## 📈 Gate Distribution Plots
 
 ### λ = 1e-06  
-<img width="896" height="487" alt="image" src="https://github.com/user-attachments/assets/8756ad37-ff9d-492d-b56c-93df6b60f016" />
+<img width="895" height="447" alt="image" src="https://github.com/user-attachments/assets/ac46b68c-b13c-4d04-8302-eb1f87037d82" />
 
 
 ---
 
 ### λ = 1e-05
-<img width="897" height="485" alt="image" src="https://github.com/user-attachments/assets/4af8704a-51be-4476-b735-1c3c6d09ff7c" />
+<img width="887" height="444" alt="image" src="https://github.com/user-attachments/assets/7412f39d-6f6a-4b43-ae7e-e0a04047777d" />
 
 ---
 
 ### λ = 1e-04
-<img width="884" height="481" alt="image" src="https://github.com/user-attachments/assets/88d8e112-342e-4e70-8046-b17109a02f0b" />
+<img width="896" height="438" alt="image" src="https://github.com/user-attachments/assets/673456d5-2179-45e9-b5d0-759235e24649" />
 
 
 ---
