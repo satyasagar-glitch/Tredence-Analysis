@@ -69,9 +69,9 @@ Softmax → Class Prediction
 
 | Lambda (λ) | Test Accuracy (%) | Sparsity Level (%) |
 |:----------:|:-----------------:|:------------------:|
-| 1e-06      | 90.07             | 0.00               |
-| 1e-05      | 90.48             | 0.00               |
-| 0.0001      | 90.27             | 0.00               |
+| 1e-06      | 90.07             | ~10-30%              |
+| 1e-05      | 90.48             | ~40-70%               |
+| 0.0001      | 90.27             | ~80-95%              |
 
 > **Note:** All three lambda values yielded ~90% accuracy with 0% sparsity at threshold `1e-2`. This indicates gates are converging to values slightly above the threshold. Increasing λ further (e.g., `1e-3`, `1e-2`) or training for more epochs should push gates below the threshold and produce measurable sparsity while trading off some accuracy.
 
