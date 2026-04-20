@@ -135,12 +135,3 @@ CIFAR-10 will be downloaded automatically to `./data/`.
 | Gate Init          | sigmoid(-1.0) ≈ 0.27         |
 | Data Augmentation  | Random flip + random crop    |
 
----
-
-## 💡 Why L1 on Sigmoid Gates Encourages Sparsity
-
-The L1 penalty creates a **constant gradient** that pushes gate values toward zero regardless of their magnitude. Unlike L2 (which applies a weaker gradient as values approach zero), L1 applies the same force all the way down — making it capable of driving values to **exactly zero**.
-
-Since our gates are always positive (Sigmoid output), minimizing their L1 sum directly minimizes the number of active connections. The optimizer faces a clear choice per gate: *"Is this connection useful enough to overcome the constant λ penalty?"* If not, the gate collapses to zero.
-
----
