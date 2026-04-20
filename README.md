@@ -90,7 +90,7 @@ Softmax → Class Prediction
 
 ---
 
-### λ = 1e-04
+### λ = 0.0001
 <img width="896" height="438" alt="image" src="https://github.com/user-attachments/assets/673456d5-2179-45e9-b5d0-759235e24649" />
 
 
